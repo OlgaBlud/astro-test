@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* === Fonts === */
+@font-face {
+  font-family: "InstrumentSans";
+  src: url("/fonts/InstrumentSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/fonts/InstrumentSans-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("/fonts/RedHatDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AnticDidone";
+  src: url("/fonts/AnticDidone-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+section {
+  /* padding: 32px 0; */
+
+  /* @include tablet {
+    padding: 60px 0;
+  } */
+
+  padding: 120px 0;
+}
+
+:root {
+  --font-sans:
+    "Instrument Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: 480px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Базовый шрифт */
+body {
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: white;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* === CSS Reset / Base === */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: inline-block;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select,
+a {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+/* common */
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  background: var(
+    --gradient-blue,
+    linear-gradient(
+      81deg,
+      #202f58 3.23%,
+      #415fa0 26.18%,
+      #1a284d 43.2%,
+      #0e172f 80.4%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-title > span {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Antic Didone";
+  font-size: 96px;
+  line-height: 120%; /* 115.2px */
+  text-transform: uppercase;
+}
+
+.decor-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    87deg,
+    #210e00 0%,
+    #521d03 20.37%,
+    #af663f 46.61%,
+    #e19a6f 66.33%,
+    #fadbca 85.2%,
+    #fac2a0 100%
+  );
+}

@@ -1,0 +1,163 @@
+---
+import MainButton from "../../components/common/MainButton.astro";
+import StarsIcon from "../../images/icons/stars.svg";
+import QuotesIcon from "../../images/icons/quotes.svg";
+---
+
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-main-wrap">
+      <div class="hero-content-wrap">
+        <h1 class="main-title">
+          <span> Acquire wealthy private individuals </span>
+          as clients on a predictable daily basis & increase enterprise value to 8
+          figures
+        </h1>
+        <p class="hero-text">
+          We take over your entire marketing on a profit-share basis & are the
+          only ones using our Swiss-developed software to legally identify
+          wealthy private individuals & serve ads to them.
+        </p>
+        <MainButton
+          text="ANALYZE POTENTIAL NOW & BOOK DEMO"
+          href="#"
+          extraStyles="mb-1.5"
+        />
+      </div>
+      <img
+        src="/images/home/home-hero-video-cover.avif"
+        alt="video cover"
+        width="621"
+      />
+    </div>
+
+    <div class="quote-block">
+      <div class="quote-left-wrap">
+        <StarsIcon />
+        <p class="text-custom-blue">
+          We searched for a long time for a way to reach wealthy private
+          individuals predictably – Estefano's system was the breakthrough.
+          Finally, no more 'agency theory,' but measurable dominance through
+          real technology. Anyone wanting to sell in the 8-figures and lead the
+          market cannot bypass this team.
+        </p>
+      </div>
+      <div class="quote-right-wrap">
+        <div class="decor-line"></div>
+        <QuotesIcon />
+        <p class="text-custom-blue">
+          Estefano took us from €2 million to €27 million in revenue in just 14
+          months
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-main-wrap {
+    margin-bottom: 80px;
+    display: flex;
+    gap: 48px;
+    align-items: flex-end;
+  }
+  .hero-section {
+    padding-top: 128px;
+    padding-bottom: 80px;
+  }
+  .main-title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.2;
+    background: linear-gradient(
+      147deg,
+      #202f58 0%,
+      #415fa0 27.88%,
+      #1a284d 57.77%,
+      #0e172f 93.75%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    & > span {
+      display: block;
+      font-weight: 600;
+      font-size: 56px;
+
+      background: linear-gradient(
+        19deg,
+        #202f58 0%,
+        #415fa0 27.88%,
+        #1a284d 48.56%,
+        #0e172f 93.75%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .hero-text {
+    margin-bottom: 40px;
+    color: var(--navy-70, rgba(35, 47, 72, 0.7));
+    font-size: 16px;
+    line-height: 140%; /* 22.4px */
+    letter-spacing: 0.48px;
+  }
+  .extra-margin {
+    margin-bottom: 6px;
+  }
+  .quote-block {
+    display: flex;
+    justify-content: space-between;
+  }
+  .quote-left-wrap {
+    padding-top: 24px;
+    max-width: 626px;
+  }
+  .quote-right-wrap {
+    position: relative;
+    padding-top: 24px;
+    padding-left: 24px;
+    max-width: 411px;
+    & > p {
+    }
+  }
+  /* .decor-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(
+      87deg,
+      #210e00 0%,
+      #521d03 20.37%,
+      #af663f 46.61%,
+      #e19a6f 66.33%,
+      #fadbca 85.2%,
+      #fac2a0 100%
+    );
+  } */
+  .quote-left-wrap p {
+    color: var(--Navy-3, #2e406a);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 153%;
+  }
+  .quote-right-wrap p {
+    color: var(--Navy-3, #2e406a);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 139%;
+  }
+  .quote-left-wrap svg {
+    width: 110px;
+    margin-bottom: 12px;
+  }
+  .quote-right-wrap svg {
+    width: 24px;
+    margin-bottom: 16px;
+  }
+</style>

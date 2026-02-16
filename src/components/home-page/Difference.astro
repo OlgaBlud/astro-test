@@ -1,0 +1,147 @@
+---
+// import { Image } from "astro:assets";
+// import itemCircleImg from "../../images/home/difference-item.png";
+import ListItemIcon from "../../images/icons/difference-item.svg";
+---
+
+<section>
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="decor-line"></div>
+      <h2 class="section-title"><span>What</span>Makes Us Different</h2>
+    </div>
+    <ul class="difference-list">
+      <li class="difference-item">
+        <ListItemIcon class="difference-item-icon" />
+        <!-- <Image
+          src={itemCircleImg}
+          alt="Total Marketing Management"
+          width={44}
+          height={44}
+          aria-hidden="true"
+        /> -->
+
+        <h3 class="difference-item-title">Total Marketing Management</h3>
+        <p class="difference-item-add-text">(Profit-Share Model)</p>
+        <p class="difference-item-text">
+          We take over ALL marketing channels (plus IT, AI, etc.) for daily
+          predictable inquiries from ready-to-buy, wealthy private clients
+          (U-HNWIs).
+        </p>
+      </li>
+      <li class="difference-item">
+        <ListItemIcon class="difference-item-icon" />
+        <h3 class="difference-item-title">Strategic Partnerships</h3>
+        <p class="difference-item-add-text">for Acquiring Wealthy Clients</p>
+        <p class="difference-item-text">
+          Our AI finds partners in seconds who already possess your target
+          audience's trust. We don't deliver lists, but scheduled meetings for
+          collaborations that massively leverage your growth.
+        </p>
+      </li>
+      <li class="difference-item">
+        <ListItemIcon class="difference-item-icon" />
+        <h3 class="difference-item-title">Proprietary Software</h3>
+        <p class="difference-item-add-text">(Swiss AG)</p>
+        <p class="difference-item-text">
+          Identifies wealthy private individuals & legally serves ads before the
+          competition even knows they exist.
+        </p>
+      </li>
+      <li class="difference-item">
+        <ListItemIcon class="difference-item-icon" />
+        <h3 class="difference-item-title">
+          Coaching & In-House Implementation
+        </h3>
+        <p class="difference-item-add-text">(Option B)</p>
+        <p class="difference-item-text">
+          We implement the exact step-by-step system in your company with which
+          we have built countless market leaders who sell to wealthy private
+          clients.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+<style>
+  section {
+    background-image: url("/src/images/home/difference-bg.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .section-title-wrap {
+    position: relative;
+    padding: 16px 24px;
+    width: 388px;
+    flex-shrink: 0;
+  }
+  /* .section-title {
+    font-size: 24px;
+    font-weight: 500;
+    background: var(
+      --gradient-blue,
+      linear-gradient(
+        81deg,
+        #202f58 3.23%,
+        #415fa0 26.18%,
+        #1a284d 43.2%,
+        #0e172f 80.4%
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .section-title > span {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Antic Didone";
+    font-size: 96px;
+    line-height: 120%; 
+    text-transform: uppercase;
+  } */
+
+  .difference-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    max-width: 828px;
+  }
+  .difference-item {
+    width: calc((100% - 8px) / 2);
+    position: relative;
+    padding: 92px 22px 32px;
+  }
+  .difference-item-icon {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 44px;
+    height: 44px;
+  }
+  .difference-item-title {
+    margin-bottom: 4px;
+    color: var(--navy-2, #19244e);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .difference-item-add-text {
+    margin-bottom: 16px;
+    color: var(--navy-2, #19244e);
+    font-size: 16px;
+    font-style: italic;
+  }
+  .difference-item-text {
+    color: var(--navy-70, rgba(35, 47, 72, 0.7));
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 153%; /* 21.42px */
+  }
+</style>
