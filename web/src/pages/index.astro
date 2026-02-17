@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home-page/Hero.astro";
+import Difference from "../components/home-page/Difference.astro";
+import Why from "../components/home-page/Why.astro";
+import type {
+  DifferenceItem,
+  DifferenceType,
+  HeroType,
+  HomeType,
+} from "../types/sanity";
+
+import { getHome } from "../libs/sanity/api";
+// import { toHTML } from "@portabletext/to-html";
+const home = (await getHome()) as HomeType;
+
+// console.log(heroContent);
+// const heroTitleHTML = heroContent?.title ? toHTML(heroContent.title) : "";
+// console.log(heroTitleHTML);
+
+// Витягуємо hero та difference секції
+const heroContent = home?.section?.find((block) => block._type === "hero") as
+  | HeroType
+  | undefined;
+const differenceContent = home?.section?.find(
+  (block) => block._type === "difference",
+) as DifferenceType | undefined;
+---
+
+<Layout title="Home Estefano Elhawary">
+  {heroContent && <Hero content={heroContent} />}
+  {differenceContent && <Difference content={differenceContent} />}
+  <Why />
+</Layout>

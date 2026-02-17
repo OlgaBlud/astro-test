@@ -1,0 +1,128 @@
+---
+// import { Image } from "astro:assets";
+// import itemCircleImg from "../../images/home/difference-item.png";
+import ListItemIcon from "../../images/icons/difference-item.svg";
+
+import type { DifferenceType } from "../../types/sanity";
+
+interface Props {
+  content: DifferenceType;
+}
+
+const { title, items } = Astro.props.content;
+---
+
+<section>
+  <div class="container">
+    <div class="section-title-wrap">
+      <div class="decor-line"></div>
+      <h2 class="section-title">
+        {
+          title.map((word) =>
+            word.highlight ? <span>{word.text}</span> : word.text,
+          )
+        }
+      </h2>
+    </div>
+
+    <ul class="difference-list">
+      {
+        items.map((item) => (
+          <li class="difference-item">
+            <ListItemIcon class="difference-item-icon" />
+
+            <h3 class="difference-item-title">{item.title}</h3>
+
+            {item.subtitle && (
+              <p class="difference-item-add-text">{item.subtitle}</p>
+            )}
+
+            <p class="difference-item-text">{item.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+<style>
+  section {
+    background-image: url("/src/images/home/difference-bg.avif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .section-title-wrap {
+    position: relative;
+    padding: 16px 24px;
+    width: 388px;
+    flex-shrink: 0;
+  }
+  /* .section-title {
+    font-size: 24px;
+    font-weight: 500;
+    background: var(
+      --gradient-blue,
+      linear-gradient(
+        81deg,
+        #202f58 3.23%,
+        #415fa0 26.18%,
+        #1a284d 43.2%,
+        #0e172f 80.4%
+      )
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .section-title > span {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Antic Didone";
+    font-size: 96px;
+    line-height: 120%; 
+    text-transform: uppercase;
+  } */
+
+  .difference-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    max-width: 828px;
+  }
+  .difference-item {
+    width: calc((100% - 8px) / 2);
+    position: relative;
+    padding: 92px 22px 32px;
+  }
+  .difference-item-icon {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 44px;
+    height: 44px;
+  }
+  .difference-item-title {
+    margin-bottom: 4px;
+    color: var(--navy-2, #19244e);
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .difference-item-add-text {
+    margin-bottom: 16px;
+    color: var(--navy-2, #19244e);
+    font-size: 16px;
+    font-style: italic;
+  }
+  .difference-item-text {
+    color: var(--navy-70, rgba(35, 47, 72, 0.7));
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 153%; /* 21.42px */
+  }
+</style>
