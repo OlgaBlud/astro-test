@@ -1,22 +1,19 @@
-
-# root dependencies (если есть)
+# Node dependencies
 node_modules/
 
-# Web
+# Web build
 web/node_modules/
 web/dist/
 web/.astro/
 web/.env
 web/.env.production
 
-# Studio
+# Studio build
 studio/node_modules/
-studio/*.local
 studio/dist/
 studio/.sanity/
+studio/*.local
 studio/*.tsbuildinfo
-studio/coverage
-
 
 # Logs
 *.log
@@ -29,3 +26,5 @@ studio/coverage
 # IDE
 .idea/
 .vscode/
+studio/.vscode
+web/.vscode
