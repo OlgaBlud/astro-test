@@ -1,0 +1,31 @@
+
+# root dependencies (если есть)
+node_modules/
+
+# Web
+web/node_modules/
+web/dist/
+web/.astro/
+web/.env
+web/.env.production
+
+# Studio
+studio/node_modules/
+studio/*.local
+studio/dist/
+studio/.sanity/
+studio/*.tsbuildinfo
+studio/coverage
+
+
+# Logs
+*.log
+/logs
+
+# OS
+.DS_Store
+*.pem
+
+# IDE
+.idea/
+.vscode/
