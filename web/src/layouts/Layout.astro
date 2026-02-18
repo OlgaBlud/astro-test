@@ -2,6 +2,7 @@
 import Header from "../components/common/Header.astro";
 import { getSiteSettings } from "../libs/sanity/api";
 import "../styles/global.css";
+import { VisualEditing } from "@sanity/astro/visual-editing";
 Header;
 interface PageTitle {
   title: string;
@@ -24,5 +25,6 @@ const { title = "Estefano Elhawary" } = Astro.props as PageTitle;
     <main>
       <slot />
     </main>
+    <VisualEditing />
   </body>
 </html>
